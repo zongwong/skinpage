@@ -22,7 +22,7 @@ html, body, .page {
 
 .header {
   height: 4.66rem;
-  background: #fffff4 url("../imgs/showbg1.png") 0 -0.36rem/100% no-repeat;
+  background: #fffff4 url("../imgs/showbg2.png") 0 -0.36rem/100% no-repeat;
   text-align: center;
   position: relative;
 }
@@ -33,7 +33,7 @@ html, body, .page {
   height: .56rem;
   line-height: .56rem;
   white-space: nowrap;
-  background-color: #406168;
+  background-color: #31381d;
   color: #fff;
   box-sizing: border-box;
   padding: .08rem .22rem;
@@ -75,7 +75,7 @@ html, body, .page {
   color: #fff;
   font-weight: bold;
   text-align: center;
-  background: #39d5d1;
+  background: #f17e00;
   border-radius: .08rem;
   left: 50%;
   margin-left: -.75rem;
@@ -105,7 +105,7 @@ html, body, .page {
 }
 
 .header .tab .tab-nav.active {
-  background: #39d5d1;
+  background: #f17e00;
 }
 
 .header .tab .tab-nav:nth-child(2) {
@@ -166,7 +166,7 @@ html, body, .page {
   width: .32rem;
   height: 100%;
   display: inline-block;
-  background: url("../imgs/icon-msg1.png") center/0.32rem 0.34rem no-repeat;
+  background: url("../imgs/icon-msg2.png") center/0.32rem 0.34rem no-repeat;
   vertical-align: top;
   margin: 0 .15rem 0 .25rem;
 }
@@ -225,22 +225,22 @@ html, body, .page {
 .body .content .tab-content .form-box .btn-item {
   width: 1.6rem;
   height: 1.6rem;
-  color: #39d5d1;
+  color: #f17e00;
   border-radius: .08rem;
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
   box-sizing: border-box;
-  border: 1px solid #39d5d1;
+  border: 1px solid #f17e00;
 }
 
 .body .content .tab-content .form-box .btn-item.active {
-  background: #39d5d1;
+  background: #f17e00;
   color: #fff;
 }
 
 .body .content .tab-content .form-box .btn-item.active input {
-  background: #39d5d1;
+  background: #f17e00;
 }
 
 .body .content .tab-content .form-box .btn-item.active input::-webkit-input-placeholder {
@@ -270,7 +270,7 @@ html, body, .page {
 }
 
 .body .content .tab-content .form-box .btn-item > input::-webkit-input-placeholder {
-  color: #39d5d1;
+  color: #f17e00;
   font-size: .4rem;
 }
 
@@ -336,12 +336,12 @@ html, body, .page {
 }
 
 .body .content .tab-pj .stars .star-box > span.active {
-  background-image: url("../imgs/star_on1.png");
+  background-image: url("../imgs/star_on2.png");
 }
 
 .body .content .tab-pj .stars .star-text {
   font-size: .28rem;
-  color: #39d5d1;
+  color: #f17e00;
 }
 
 .body .content .tab-pj .remarks {
@@ -353,7 +353,7 @@ html, body, .page {
   font-size: .24rem;
   text-align: left;
   padding: 0 .1rem;
-  margin-bottom: .2rem;
+  margin-bottom: .3rem;
 }
 
 .body .content .tab-pj .remarks .remark-item {
@@ -372,12 +372,12 @@ html, body, .page {
 }
 
 .body .content .tab-pj .remarks .remark-item.active {
-  border-color: #39d5d1;
-  color: #39d5d1;
+  border-color: #f17e00;
+  color: #f17e00;
 }
 
 .body .content .tab-pj .remarks .remark-item.active i {
-  background-image: url("../imgs/love-on1.png");
+  background-image: url("../imgs/love-on2.png");
 }
 
 .body .content .tab-pj .remarks .remark-item span {
@@ -397,12 +397,12 @@ html, body, .page {
 }
 
 .body .content .tab-pj .remarks .remark-free.active textarea {
-  border-color: #39d5d1;
-  color: #39d5d1;
+  border-color: #f17e00;
+  color: #f17e00;
 }
 
 .body .content .tab-pj .remarks .remark-free.active textarea::-webkit-input-placeholder {
-  color: #39d5d1;
+  color: #f17e00;
 }
 
 .body .content .tab-pj .remarks .remark-free textarea {
@@ -426,7 +426,7 @@ html, body, .page {
 }
 
 .body .submit .submit-btn {
-  background: #39d5d1;
+  background: #f17e00;
   color: #fff;
   width: 6.68rem;
   line-height: .8rem;
