@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size:50px">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +12,17 @@
             font-family: -apple-system-font, Helvetica Neue, sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="swiper.min.css">
     <link rel="stylesheet" href="./css/skin.css">
 </head>
-
 <body>
-    <audio src="/home/music/1.mp3" preload="auto"></audio>
+    <!-- <audio src="/home/music/1.mp3" preload="auto"></audio>
     <audio src="/home/music/2.mp3" preload="auto"></audio>
     <audio src="/home/music/3.mp3" preload="auto"></audio>
     <audio src="/home/music/4.mp3" preload="auto"></audio>
     <audio src="/home/music/5.mp3" preload="auto"></audio>
     <audio src="/home/music/6.mp3" preload="auto"></audio>
-    <audio src="/home/music/7.mp3" preload="auto"></audio>
+    <audio src="/home/music/7.mp3" preload="auto"></audio> -->
     <div class="page">
         <div class="header">
             <div class="title">
@@ -35,7 +34,7 @@
                 <span class="avatar-number">801号</span>
             </div>
             <div class="tab">
-                <div class="tab-nav active">
+                <!-- <div class="tab-nav active">
                     <i class="icon icon-pj"></i>
                     <span>评价</span>
                 </div>
@@ -46,106 +45,132 @@
                 <div class="tab-nav">
                     <i class="icon icon-md"></i>
                     <span>买单</span>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="hrbg"></div>
         <div class="body">
             <div class="message">
                 <i class="icon-message"></i>
-                <div class="message-text">关注赏一赏公众号,更多精彩内容不容错过:14587258741</div>
-            </div>
-            <div class="content">
-                <div class="tab-content tab-pj" style="display:block">
-                    <span class="tips-title">服务满意~请评价</span>
-                    <div class="stars">
-                        <div class="star-box">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="star-text">满意</p>
+                <div class="message-text">
+                    <div class="topnewsbox">
+                        <div>关注赏一赏公众号,更多精关注赏一赏公众号,更多精彩内容不容错过</div>
                     </div>
-                    <div class="remarks">
-                        <p>请选择标签</p>
-                        <div class="remark-box">
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                            <div class="remark-item">
-                                <span>服务很好</span>
-                                <i></i>
-                            </div>
-                        </div>
-                        <div class="remark-free">
-                            <textarea id="pj" placeholder="如果有其他意见或建议，请放心填写，感谢您的支持！"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content" style="display:none">
-                    <span class="tips-title">满意你就~赏一赏</span>
-                    <div class="form-box">
-                        <div class="btn-item">
-                            <span>5</span>
-                            <span>元</span>
-                        </div>
-                        <div class="btn-item">
-                            <span>18</span>
-                            <span>元</span>
-                        </div>
-                        <div class="btn-item">
-                            <span>20</span>
-                            <span>元</span>
-                        </div>
-                        <div class="btn-item">
-                            <span>59</span>
-                            <span>元</span>
-                        </div>
-                        <div class="btn-item">
-                            <span>100</span>
-                            <span>元</span>
-                        </div>
-                        <div class="btn-item">
-                            <input type="number" placeholder="其他" id="diy_price">
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content tab-order" style="display:none">
-                    <span class="tips-title">祝您消费~愉快</span>
-                    <div class="order-box">
-                        <div class="order-mask"></div>
-                        <img src="./imgs/orderQrcode.png" alt="">
-                    </div>
-                    <p class="order-tips">长按识别图中二维码 扫码即可买单</p>
                 </div>
             </div>
-            <div class="submit">
-                <a class="submit-btn" href="javascript:">立即提交</a>
+            <div class="swiper-container content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tab-content tab-pj">
+                        <span class="tips-title">服务满意~请评价</span>
+                        <div class="stars">
+                            <div class="star-box">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p class="star-text">满意</p>
+                        </div>
+                        <div class="remarks">
+                            <p>请选择标签</p>
+                            <div class="remark-box">
+                                <div class="remark-item">
+                                    <span>服务很好啊</span>
+                                    <i></i>
+                                </div>
+                                <div class="remark-item">
+                                    <span>服务很好啊啊</span>
+                                    <i></i>
+                                </div>
+                                <div class="remark-item">
+                                    <span>服务很好气温气温</span>
+                                    <i></i>
+                                </div>
+                                <div class="remark-item">
+                                    <span>服务很好</span>
+                                    <i></i>
+                                </div>
+                                <div class="remark-item">
+                                    <span>服务很好</span>
+                                    <i></i>
+                                </div>
+                                <div class="remark-item">
+                                    <span>服务很好</span>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <div class="remark-free">
+                                <textarea id="pj" placeholder="如果有其他意见或建议，请放心填写，感谢您的支持！"></textarea>
+                            </div>
+                        </div>
+                        <a class="submit-btn" href="javascript:">立即提交</a>
+                    </div>
+                    <div class="swiper-slide tab-content">
+                        <span class="tips-title">满意你就~赏一赏</span>
+                        <div class="form-box">
+                            <div class="btn-item">
+                                <span>5</span>
+                                <span>元</span>
+                            </div>
+                            <div class="btn-item">
+                                <span>18</span>
+                                <span>元</span>
+                            </div>
+                            <div class="btn-item">
+                                <span>20</span>
+                                <span>元</span>
+                            </div>
+                            <div class="btn-item">
+                                <span>59</span>
+                                <span>元</span>
+                            </div>
+                            <div class="btn-item">
+                                <span>100</span>
+                                <span>元</span>
+                            </div>
+                            <div class="btn-item">
+                                <input type="number" placeholder="其他" id="diy_price">
+                            </div>
+                        </div>
+                        <a class="submit-btn" href="javascript:">立即提交</a>
+                    </div>
+                    <div class="swiper-slide tab-content tab-order">
+                        <span class="tips-title">祝您消费~愉快</span>
+                        <div class="order-box">
+                            <div class="order-mask"></div>
+                            <img src="./imgs/orderQrcode.png" alt="">
+                        </div>
+                        <p class="order-tips">长按识别图中二维码 扫码即可买单</p>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="swiper.min.js"></script>
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true,
+            // 如果需要分页器
+            paginationClickable:true,
+            pagination: '.tab',
+            paginationBulletRender(swiper,index, className){
+                switch(index){
+                    case 0:
+                        var name = '评价',type='pj';break;
+                    case 1:
+                        var name = '打赏',type='ds';break;
+                    case 2:
+                        var name = '买单',type='md';break;
+                }
+                return '<div class="tab-nav '+className+'">'+
+                            '<i class="icon icon-'+type+'"></i>'+
+                            '<span>'+name+'</span>'+
+                        '</div>';
+            },
+        })        
+    </script>
     <script src="./das.js"></script>
 </body>
-
 </html>

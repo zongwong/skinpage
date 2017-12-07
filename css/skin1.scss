@@ -1,6 +1,7 @@
-@import "./skin/skin8.scss";
+@import "./skin/skin1.scss";
 *{
     margin: 0;padding: 0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 a{
     text-decoration: none;
@@ -15,14 +16,15 @@ ul,li{
 // }
 html,body,.page{
     height: 100%;
+    width: 100%;
 }
 .page{
     background: #fffff4;
-    overflow-y: auto;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 .header{
-    height: 4.66rem;
+    height: 4.5rem;
     background: #fffff4 url($shopBgUrl) 0 -.34rem / 100% no-repeat;
     text-align: center;
     position: relative;
@@ -35,19 +37,26 @@ html,body,.page{
         background-color:$shopColor;
         color: #fff;
         box-sizing: border-box;
-        padding: .08rem .22rem;
+        padding: 0 .22rem;
         margin-top: .2rem;
         .title-img{
             width: .4rem;
             height: .4rem;
-            box-sizing: border-box;
-            display: inline-block;
-            vertical-align: top;
+            // display: inline-block;
+            float: left;
+            margin-right: .1rem;
+            margin-top: 0.08rem;
+            // display: none;
+            // vertical-align: middle;
         }
         .title-name{
             line-height: .4rem;
-            display: inline-block;
-            vertical-align: top;
+            height: .4rem;
+            // display: inline-block;
+            margin-top: 0.08rem;
+            font-size: 16px;
+            float: left;
+            // vertical-align: middle;
         }
     }
     .avatar{
@@ -60,6 +69,7 @@ html,body,.page{
         .avatar-img{
             width: 100%;
             height: 100%;
+            border-radius: 50%;
         }
         .avatar-number{
             position: absolute;
@@ -93,7 +103,8 @@ html,body,.page{
             color: #fff;
             border-radius: .08rem .08rem 0 0;
             cursor: pointer;
-            &.active{
+            opacity: 1;
+            &.swiper-pagination-bullet-active{
                 background: $mainColor;
             }
             &:nth-child(2){
@@ -124,6 +135,7 @@ html,body,.page{
                 vertical-align: middle;
                 height: 100%;
                 line-height: .64rem;
+                font-size: 16px;
             }
         }
     }
@@ -145,25 +157,42 @@ html,body,.page{
         .icon-message{
             width: .32rem;
             height: 100%;
-            display: inline-block;
+            float: left;
             background: url($msgUrl) center / .32rem .34rem no-repeat;
-            vertical-align: top;
+            // vertical-align: middle;
             margin: 0 .15rem 0 .25rem;
         }
         .message-text{
-            display: inline-block;
-            vertical-align: top;
+            float: left;
+            // vertical-align: middle;
             height: .55rem;
             line-height: .55rem;
+            overflow: hidden;
+            max-width: calc(100% - .8rem);
+            .topnewsbox{
+                width: 100%;
+                height: 100%;
+                div{
+                    white-space: nowrap;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 1;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: 12px;
+                    padding: calc((0.55rem - 12px)/2) 0;
+                    box-sizing: border-box;
+                }
+            }
         }
     }
-
     .content{
-        // height: 6.42rem;
+        height: 6.42rem;
         padding: 0;
         position: relative;
         .tab-content{
             width: 100%;
+            position: relative;
             // height: 100%;
             // position: absolute;
             // top: 0;
@@ -173,7 +202,7 @@ html,body,.page{
                 color: #3e405a;
                 font-size: .24rem;
                 position: relative;
-                margin:.4rem 0 .8rem 0;
+                margin:.15rem 0;
                 display: inline-block;
                 &::before,&::after{
                     content: '';
@@ -182,7 +211,7 @@ html,body,.page{
                     background: #3e405a;
                     position: absolute;
                     top: 50%;
-                    transform: scale(50%) translateY(-50%);
+                    transform: scale(.5) translateY(-50%);
                 }
                 &::before{
                     left: -110%;
@@ -193,11 +222,17 @@ html,body,.page{
             }
             .form-box{
                 text-align: center;
+                margin-top: .24rem;
+                padding: 0 .5rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
                 .btn-item{
-                    width: 1.6rem;
-                    height: 1.6rem;
+                    width: 1.8rem;
+                    height: 1.8rem;
                     color: $mainColor;
                     border-radius: .08rem;
+                    margin-bottom: .4rem;
                     display: inline-block;
                     overflow: hidden;
                     vertical-align: top;
@@ -213,12 +248,12 @@ html,body,.page{
                             }
                         }
                     }
-                    &:nth-child(3n-1){
-                        margin: 0 .6rem .6rem;
-                    }
+                    // &:nth-child(3n-1){
+                    //     margin: 0 .6rem .6rem;
+                    // }
                     &>span:first-child{
                         font-size: .65rem;
-                        line-height: 1.6rem;
+                        line-height: 1.8rem;
                     }
                     &>input{
                         display: inline-block;
@@ -230,6 +265,7 @@ html,body,.page{
                         box-sizing: border-box;
                         font-size: .65rem;
                         color: #fff;
+                        line-height: 1.8rem;
                         text-align: center;
                         &::-webkit-input-placeholder{
                             color:$mainColor;
@@ -246,7 +282,7 @@ html,body,.page{
                 height: 4.1rem;
                 background: url(../imgs/orderBg.png) center / 100% no-repeat;
                 position: relative;
-                margin: 0 auto;
+                margin: .3rem auto;
                 .order-mask{
                     position: absolute;
                     top: 0;
@@ -275,9 +311,9 @@ html,body,.page{
             }
             .stars{
                 text-align: center;
+                margin: .2rem 0 0 0;
                 .star-box{
                     text-align: center;
-                    margin: .3rem 0 .2rem 0;
                     &>span{
                         display: inline-block;
                         width: .38rem;
@@ -303,48 +339,62 @@ html,body,.page{
 
             }
             .remarks{
-                padding: 0 .4rem;
+                padding: 0 .3rem;
                 color: #9f9f9f;
                 text-align: left;
                 &>p{
                     font-size: .24rem;
                     text-align: left;
                     padding: 0 .1rem;
-                    margin-bottom: .2rem;
+                    margin-bottom: .1rem;
                 }
-                .remark-item{
-                    display: inline-block;
-                    border-radius: .3rem;
-                    // width: 2rem;
-                    padding: 0 .2rem;
-                    height: .64rem;
-                    box-sizing: border-box;
-                    border: 1px solid #9f9f9f;
-                    margin-bottom: .4rem;
-                    &:nth-child(3n-1){
-                        margin-left: .2rem;
-                        margin-right: .2rem;
-                    }
-                    &.active{
-                        border-color: $mainColor;
-                        color: $mainColor;
-                        i{
-                            background-image: url($loveOnUrl);
+                .remark-box{  
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;              
+                    .remark-item{
+                        display: inline-block;
+                        border-radius: .3rem;
+                        width: 2.1rem;
+                        // padding: 0 .2rem;
+                        text-align: center;
+                        height: .64rem;
+                        box-sizing: border-box;
+                        border: 1px solid #9f9f9f;
+                        margin-bottom: .25rem;
+                        // &:nth-child(3n-1){
+                        //     margin-left: .2rem;
+                        //     margin-right: .2rem;
+                        // }
+                        &.active{
+                            border-color: $mainColor;
+                            color: $mainColor;
+                            i{
+                                background-image: url($loveOnUrl);
+                            }
+                            span{
+                                color: $mainColor;
+                            }
                         }
-                    }
-                    span{
-                        display: inline-block;
-                        vertical-align: middle;
-                        font-size: .24rem;
-                        line-height: calc(.64rem - 2px);
-                        margin-right: .1rem;
-                    }
-                    i{
-                        display: inline-block;
-                        width: .3rem;
-                        height: .24rem;
-                        background: url(../imgs/love-default.png) center / 100% no-repeat;
-                        vertical-align: middle;
+                        span{
+                            display: block;
+                            // vertical-align: middle;
+                            font-size: .32rem;
+                            line-height: calc(.64rem - 2px);
+                            margin-right: .05rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            color: rgb(195, 195, 195);
+                        }
+                        i{
+                            display: inline-block;
+                            width: .3rem;
+                            height: .24rem;
+                            background: url(../imgs/love-default.png) center / 100% no-repeat;
+                            vertical-align: middle;
+                            display: none;
+                        }
                     }
                 }
                 .remark-free{
@@ -358,37 +408,39 @@ html,body,.page{
                         }
                     }
                     textarea{
-                        width: 99%;
+                        width: 100%;
                         height: 1.24rem;
                         border: 1px solid #9f9f9f;
-                        color: #9f9f9f;
+                        // color: #9f9f9f;
+                        color: rgb(195, 195, 195);
                         outline: none;
                         background: #fffff4;
                         border-radius: .3rem;
                         box-sizing: border-box;
                         padding: .22rem;
                         &::-webkit-input-placeholder{
-                            color: #9f9f9f;
+                            color: rgb(195, 195, 195);
                         }
                     }
                 }
             }
         }
+    }        
+    .submit-btn{
+        background: $mainColor;
+        color: #fff;
+        width: calc(100% - 0.6rem);
+        line-height: .8rem;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        border-radius: .12rem;
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .submit{
-        margin-top: .3rem;
-        .submit-btn{
-            background: $mainColor;
-            color: #fff;
-            width: 6.68rem;
-            line-height: .8rem;
-            text-align: center;
-            display: block;
-            margin: 0 auto;
-            border-radius: .12rem;
-            margin-bottom: .3rem;
-        }
-    }
+
 }
 .bannerasd{
     width: 6.9rem;

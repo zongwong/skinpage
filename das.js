@@ -1,17 +1,43 @@
 // tab
-var tabNavs = $('.tab-nav');
-var tabContents = $('.tab-content');
-tabNavs.on('click', function () {
-    var index = $(this).index();
-    $(this).addClass('active').siblings().removeClass('active');
-    tabContents.hide().eq(index).show();
-    if (index == 2) {
-        $('.submit').hide()
-    } else {
-        $('.submit').show()
-    }
-})
-
+// var tabNavs = $('.tab-nav');
+// var tabContents = $('.tab-content');
+// tabNavs.on('click', function () {
+//     var index = $(this).index();
+//     $(this).addClass('active').siblings().removeClass('active');
+//     tabContents.hide().eq(index).show();
+//     if (index == 2) {
+//         $('.submit').hide()
+//     } else {
+//         $('.submit').show()
+//     }
+// })
+// 字体适应
+// var $span = $('.remark-item>span');
+// console.log($span)
+// $span.each(function (index,item){
+//     var num = $(item).text().length;
+//     console.log(num)
+//     if(num==6){
+//         $(item).css('fontSize','12px');
+//     }else if(num>6){
+//         $(item).css('transform','scale(.5)');
+//     }
+// })
+//消息滚动
+var $topnewsbox = $('.topnewsbox'),
+    topnewtimer = null;
+if($topnewsbox.children().length>=2){
+    topmove();
+}
+function topmove() {
+    topnewtimer = setInterval(function () {
+        $topnewsbox.animate({
+            'margin-top': '-0.55rem'
+        }, function () {
+            $topnewsbox.css('margin-top', 0).find('div:first').appendTo($topnewsbox);
+        })
+    }, 3000);
+}
 
 var staff_id = 1 || "{$staffinfo.staff_id}";
 var price = 0;
@@ -27,7 +53,6 @@ $dsItms.on('click', function () {
         $('audio')[index].play();
     }
     price = parseInt($(this).children().eq(0).text());
-    console.log(price)
 });
 $('#diy_price').on('focus', function () {
     $(this).parent().addClass('active').siblings().removeClass('active');
@@ -48,11 +73,9 @@ $('.remark-item').click(function () {
         $(this).removeClass('active')
         var index = words.indexOf($(this).children().eq(0).text());
         words.splice(index, 1);
-
     } else {
         $(this).addClass('active');
         words.push($(this).children().eq(0).text());
-
     }
 });
 $('#pj').on('focus', function () {
@@ -107,7 +130,6 @@ $('.submit-btn').click(function () {
     words.forEach(function (item) {
         words_str += item + '$$$';
     });
-    console.log(words_str)
     if (star == 0) {
         alert("请选择星级");
         tabNavs.eq(0).click();
