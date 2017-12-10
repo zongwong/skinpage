@@ -30,7 +30,7 @@ html, body, .page {
 }
 
 .header .maskBg {
-  background: #fffff4 url("../imgs/showbg1.png") 0 -0.08rem/100% no-repeat;
+  background: #fffff4 url("../imgs/showbg3.png") 0 -0.08rem/100% no-repeat;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -160,7 +160,7 @@ html, body, .page {
 }
 
 .header .tab .tab-nav.swiper-pagination-bullet-active {
-  background: linear-gradient(to bottom, #63FEF8, #39d6d0);
+  background: linear-gradient(to bottom, #95CCFF, #67b6ff);
 }
 
 .header .tab .tab-nav:nth-child(2) {
@@ -222,7 +222,7 @@ html, body, .page {
   width: .32rem;
   height: 100%;
   float: left;
-  background: url("../imgs/icon-msg1.png") center/0.32rem 0.34rem no-repeat;
+  background: url("../imgs/icon-msg3.png") center/0.32rem 0.34rem no-repeat;
   margin: 0 .15rem 0 .25rem;
 }
 
@@ -302,23 +302,23 @@ html, body, .page {
 .body .content .tab-content .form-box .btn-item {
   width: 1.8rem;
   height: 1.8rem;
-  color: #39d6d0;
+  color: #67b6ff;
   border-radius: .08rem;
   margin-bottom: .4rem;
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
   box-sizing: border-box;
-  border: 1px solid #39d6d0;
+  border: 1px solid #67b6ff;
 }
 
 .body .content .tab-content .form-box .btn-item.active {
-  background: #39d6d0;
+  background: #67b6ff;
   color: #fff;
 }
 
 .body .content .tab-content .form-box .btn-item.active input {
-  background: #39d6d0;
+  background: #67b6ff;
 }
 
 .body .content .tab-content .form-box .btn-item.active input::-webkit-input-placeholder {
@@ -345,7 +345,7 @@ html, body, .page {
 }
 
 .body .content .tab-content .form-box .btn-item > input::-webkit-input-placeholder {
-  color: #39d6d0;
+  color: #67b6ff;
   font-size: .4rem;
 }
 
@@ -410,12 +410,12 @@ html, body, .page {
 }
 
 .body .content .tab-pj .stars .star-box > span.active {
-  background-image: url("../imgs/star_on1.png");
+  background-image: url("../imgs/star_on3.png");
 }
 
 .body .content .tab-pj .stars .star-text {
   font-size: .3rem;
-  color: #39d6d0;
+  color: #67b6ff;
 }
 
 .body .content .tab-pj .remarks {
@@ -444,18 +444,18 @@ html, body, .page {
   text-align: center;
   height: .64rem;
   box-sizing: border-box;
-  border: 1px solid #39d6d0;
-  color: #39d6d0;
+  border: 1px solid #67b6ff;
+  color: #67b6ff;
   margin-bottom: .25rem;
 }
 
 .body .content .tab-pj .remarks .remark-box .remark-item.active {
-  background-color: #39d6d0;
+  background-color: #67b6ff;
   color: #fff;
 }
 
 .body .content .tab-pj .remarks .remark-box .remark-item.active i {
-  background-image: url("../imgs/love-on1.png");
+  background-image: url("../imgs/love-on3.png");
 }
 
 .body .content .tab-pj .remarks .remark-box .remark-item.active span {
@@ -482,7 +482,7 @@ html, body, .page {
 }
 
 .body .content .tab-pj .remarks .remark-free.active textarea {
-  border-color: #39d6d0;
+  border-color: #67b6ff;
   color: #000;
   font-size: 16px;
 }
@@ -506,7 +506,7 @@ html, body, .page {
 }
 
 .body .submit-btn {
-  background: linear-gradient(to bottom, #63FEF8, #39d6d0);
+  background: linear-gradient(to bottom, #95CCFF, #67b6ff);
   color: #fff;
   width: calc(100% - 0.6rem);
   line-height: .8rem;

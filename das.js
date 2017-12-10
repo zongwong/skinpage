@@ -50,7 +50,7 @@ $dsItms.on('click', function () {
     $('#diy_price').val('');
     var index = $(this).index();
     if (index < 7) {
-        $('audio')[index].play();
+        // $('audio')[index].play();
     }
     price = parseInt($(this).children().eq(0).text());
 });
