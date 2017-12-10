@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>赏一赏</title>
+    <script>
+        ! function (window) {
+            var docWidth = 750;
+            var doc = window.document,
+                docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = (function refreshRem() {
+                var clientWidth = docEl.getBoundingClientRect().width;
+                docEl.style.fontSize = Math.max(Math.min(20 * (clientWidth / docWidth), 11.2), 8.55) * 5 + 'px';
+                return refreshRem;
+            })();
+            docEl.setAttribute('data-dpr', window.navigator.appVersion.match(/iphone/gi) ? window.devicePixelRatio : 1);
+            if (/iP(hone|od|ad)/.test(window.navigator.userAgent)) {
+                doc.documentElement.classList.add('ios');
+                if (parseInt(window.navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/)[1], 10) >= 8)
+                    doc.documentElement.classList.add('hairline');
+            }
+            if (!doc.addEventListener) return;
+            window.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }(window);
+    </script>
+    <style>
+        body {
+            font-size: 0.32rem;
+            line-height: 1.6;
+            font-family: -apple-system-font, Helvetica Neue, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="/home/css/swiper.min.css">
+    <link rel="stylesheet" href="/home/css/skin{$skin}.css?v=1">
+</head>
+
+<body>
+    <audio src="/home/music/1.mp3" preload="auto"></audio>
+    <audio src="/home/music/2.mp3" preload="auto"></audio>
+    <audio src="/home/music/3.mp3" preload="auto"></audio>
+    <audio src="/home/music/4.mp3" preload="auto"></audio>
+    <audio src="/home/music/5.mp3" preload="auto"></audio>
+    <audio src="/home/music/6.mp3" preload="auto"></audio>
+    <audio src="/home/music/7.mp3" preload="auto"></audio>
+    <div class="page">
+        <div class="header">
+            <div class="maskBg"></div>
+            <div class="title-box">
+                <div class="title">
+                    <!-- <img class="title-img" src="/home/imgs/default_mera.png" alt="头像"> -->
+                    <span class="title-name">{$merchant_name}欢迎您</span>
+                    <div class="dotSpan"></div>
+                    <div class="dotSpan"></div>
+                </div>
+            </div>
+            <div class="avatar">
+                {notempty name="staffinfo.headimgurl"}
+                <img class="avatar-img" src="{$staffinfo.headimgurl}" alt=""> {else/}
+                <img class="avatar-img" src="/home/imgs/default_staffa.png"> {/notempty}
+
+                <span class="avatar-number">{$staffinfo.staff_no}号</span>
+            </div>
+            <div class="tab">
+                <!-- <div class="tab-nav active">
+                    <i class="icon icon-pj"></i>
+                    <span>评价</span>
+                </div>
+                <div class="tab-nav">
+                    <i class="icon icon-ds"></i>
+                    <span>打赏</span>
+                </div>
+                <div class="tab-nav">
+                    <i class="icon icon-md"></i>
+                    <span>买单</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="hrbg"></div>
+        <div class="body">
+            <div class="message">
+                <i class="icon-message"></i>
+                <div class="message-text">
+                    <div class="topnewsbox">
+                        <!-- <div>习近平:人人充分享有人权 是人类社会的梦想</div> -->
+                        <div>关注赏一赏公众号,更多精彩内容不容错过!</div>
+                        <!-- <div>全球税负大比拼：20多国税负超50% 减税成趋势</div> -->
+                        <!-- <div>共享单车真如马化腾所说，成移动支付推广工具了？</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tab-content tab-pj">
+                        <span class="tips-title">服务满意~请评价</span>
+                        <div class="stars">
+                            <div class="star-box">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p class="star-text">满意</p>
+                        </div>
+                        <div class="remarks">
+                            <p>请选择标签</p>
+                            <div class="remark-box">
+                                {notempty name="wordlist"} {volist name="wordlist" id="vo"}
+                                <div class="remark-item">
+                                    <span>{$vo}</span>
+                                    <i></i>
+                                </div>
+                                {/volist} {/notempty}
+                            </div>
+                            <div class="remark-free">
+                                <textarea id="pj" placeholder="如果有其他意见或建议，请放心填写，感谢您的支持！"></textarea>
+                            </div>
+                        </div>
+                        <a class="submit-btn" href="javascript:">立即提交</a>
+                    </div>
+                    <div class="swiper-slide tab-content">
+                        <span class="tips-title">满意你就~赏一赏</span>
+                        <div class="form-box">
+                            {volist name="amountlist" id="vo"}
+                            <div class="btn-item">
+                                <span>{$vo}</span>
+                                <span>元</span>
+                            </div>
+                            {/volist}
+                            <div class="btn-item">
+                                <input type="number" placeholder="其他" id="diy_price">
+                            </div>
+                        </div>
+                        <a class="submit-btn" href="javascript:">立即提交</a>
+                    </div>
+                    <div class="swiper-slide tab-content tab-order">
+                        <span class="tips-title">祝您消费~愉快</span>
+                        <div class="order-box">
+                            <div class="order-mask"></div>
+                            <img src="/home/imgs/orderQrcode.png" alt="">
+                        </div>
+                        <p class="order-tips">长按识别图中二维码 扫码即可买单</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="success-box" style="display:none">
+        <img src="/home/imgs/success.png" alt="">
+        <p>评价成功</p>
+        <p>真诚感谢您的评价！</p>
+    </div>
+    <img src="/home/imgs/abanner.png" alt="广告" class="bannerasd" style="display:none">
+    <script>
+        var staff_id = "{$staffinfo.staff_id}";
+        var submitUrl = "{:url('/reward/submit')}";
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="/home/js/swiper.min.js"></script>
+    <script src="/home/js/das.js"></script>
+</body>
+
+</html>
