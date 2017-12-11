@@ -296,12 +296,12 @@ html, body, .page {
   padding: 0 .5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .body .content .tab-content .form-box .btn-item {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.76rem;
+  height: 1.76rem;
   color: #67b6ff;
   border-radius: .08rem;
   margin-bottom: .4rem;
@@ -326,8 +326,12 @@ html, body, .page {
 }
 
 .body .content .tab-content .form-box .btn-item > span:first-child {
-  font-size: .65rem;
-  line-height: 1.8rem;
+  font-size: .71rem;
+  line-height: 1.76rem;
+}
+
+.body .content .tab-content .form-box .btn-item > span:last-child {
+  font-size: .26rem;
 }
 
 .body .content .tab-content .form-box .btn-item > input {
@@ -338,9 +342,9 @@ html, body, .page {
   outline: none;
   background: #fffff4;
   box-sizing: border-box;
-  font-size: .65rem;
+  font-size: .71rem;
   color: #fff;
-  line-height: 1.8rem;
+  line-height: 1.76rem;
   text-align: center;
 }
 
@@ -434,7 +438,7 @@ html, body, .page {
 .body .content .tab-pj .remarks .remark-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .body .content .tab-pj .remarks .remark-box .remark-item {
@@ -506,7 +510,7 @@ html, body, .page {
 }
 
 .body .submit-btn {
-  background: linear-gradient(to bottom, #95CCFF, #67b6ff);
+  background: #67b6ff;
   color: #fff;
   width: calc(100% - 0.6rem);
   line-height: .8rem;

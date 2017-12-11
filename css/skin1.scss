@@ -276,10 +276,10 @@ html,body,.page{
                 padding: 0 .5rem;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-around;
                 .btn-item{
-                    width: 1.8rem;
-                    height: 1.8rem;
+                    width: 1.76rem;
+                    height: 1.76rem;
                     color: $mainColor;
                     border-radius: .08rem;
                     margin-bottom: .4rem;
@@ -302,8 +302,11 @@ html,body,.page{
                     //     margin: 0 .6rem .6rem;
                     // }
                     &>span:first-child{
-                        font-size: .65rem;
-                        line-height: 1.8rem;
+                        font-size: .71rem;
+                        line-height: 1.76rem;
+                    }
+                    &>span:last-child{
+                        font-size: .26rem;
                     }
                     &>input{
                         display: inline-block;
@@ -313,9 +316,9 @@ html,body,.page{
                         outline: none;
                         background: #fffff4;
                         box-sizing: border-box;
-                        font-size: .65rem;
+                        font-size: .71rem;
                         color: #fff;
-                        line-height: 1.8rem;
+                        line-height: 1.76rem;
                         text-align: center;
                         &::-webkit-input-placeholder{
                             color:$mainColor;
@@ -402,7 +405,7 @@ html,body,.page{
                 .remark-box{  
                     display: flex;
                     flex-wrap: wrap; 
-                    justify-content: space-between;              
+                    justify-content: space-around;              
                     .remark-item{
                         display: inline-block;
                         border-radius: .4rem;
@@ -480,7 +483,7 @@ html,body,.page{
         }
     }        
     .submit-btn{
-        background: linear-gradient(to bottom,$starColor,$mainColor);
+        background: $mainColor;
         color: #fff;
         width: calc(100% - 0.6rem);
         line-height: .8rem;
